@@ -8,8 +8,8 @@ var bio = {
         "email": "BrendanDrobek@gmail.com",
         "githubUrl" : "https://github.com/Kleinbottled"
     },
-    "picUrl" : "images/profile.jpg",
-    "welcome": "Hi and thank you for reviewing my interactive resume",
+    "bioPic" : "images/profile.jpg",
+    "welcomeMessage": '"Hi, and thank you for reviewing my interactive resume.  Looking forward to a new career in Web Development."',
     "skills" : [
     	"HTML", 
     	"CSS3", 
@@ -21,8 +21,8 @@ var bio = {
 bio.display = function() {
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  var formattedbiopic = HTMLbioPic.replace('%data%', bio.picUrl);
-  var formattedWM = HTMLwelcomeMsg.replace('%data%', bio.welcome);
+  var formattedbiopic = HTMLbioPic.replace('%data%', bio.bioPic);
+  var formattedWM = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
   
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
@@ -46,7 +46,6 @@ bio.display = function() {
   $("#footerContacts").append(formattedLocation);
 
   if (bio.skills.length > 0) {
-
 	$("#header").append(HTMLskillsStart);
 	for (x in bio.skills) {
 	  var formattedSkill = HTMLskills.replace('%data%', bio.skills[x]);
@@ -70,6 +69,7 @@ var work = {
 	  	"title" : "Pastry Chef, Cook",
 	  	"location" : "San Diego CA, US",
 	  	"dates" : "2002 - 2011",
+	  	"workUrl" : "http://www.yelp.com",
 	  	"description" : "The Pastry Chef demonstrates strong leadership qualities with attention to detail in elevating and sustaining a competitive edge. The Chef is accountable for the quality and consistency of all pastry products produced and served including the efficiencies, consistency, associate training and accountability of costs associated with the pastry department. The Pastry Chef works directly with the Executive Chef on the creation, development and implementation of new desserts and creative menu developments."
 	  },
 	  {
@@ -77,6 +77,7 @@ var work = {
 	  	"title" : "Bartender, Waiter",
 	  	"location" : "Berkeley CA, US",
 	  	"dates" : "1999 - 2002",
+	  	"workUrl" : "http://www.yelp.com",
 	  	"description" : "The purpose of this position is to interact with guests and ensure they have a great experience when dining at the restaurant. Restaurant Bartenders are responsible for positive guest interactions while accurately mixing and serving beverages to guests and servers in a friendly and efficient manner. At all times, bartenders are expected to be attentive to our guest needs and make them feel welcome, comfortable, important and relaxed."
 	  }
 	  ]
@@ -214,13 +215,11 @@ education.display =function() {
         $(".education-entry:last").append(formattedonlineDates);
         $(".education-entry:last").append(formattedonlineUrl);
     }
-
 }
 bio.display();
 work.display();
 projects.display();
 education.display();
-
 
 $('#mapDiv').append(googleMap);
 
@@ -235,4 +234,4 @@ function inName(name) {
   name[1] = name[1].toUpperCase();
   name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
   return name[1] +" "+name[0];
-  }       
+}
