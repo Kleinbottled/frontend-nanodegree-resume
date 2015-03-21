@@ -109,31 +109,30 @@ var projects = {
 		  "description" : "Learning a little HTML",
 		  "projUrl" : "https://github.com/Kleinbottled/Udacity-Hello-World-",
 		  "images" :  [
-		  	"http://www.placekitten.com/180/249",
-		  	"http://www.placesheen.com/210/247",
+		  	"images/GitBash.png",
 		  	"http://www.placekitten.com/200/208"
 		  	]
 		},
 		{
 		  "title" : "Portfolio",
 		  "dates" : "March 8th 2015, March 9th 2015",
-		  "description" : "Learning a little more HTML",
+		  "description" : "Learning a little more HTML and Some CSS",
 		  "projUrl" : "https://github.com/Kleinbottled/Portfolio",
 		  "images" :  [
-		  "http://www.placesheen.com/200/290",
-		  "http://www.placekitten.com/205/241",
-		  "http://www.placesheen.com/145/252"
+		  "images/PortfolioScreen.png",
+		  "images/PortfolioScreen2.png",
+		  "images/PortfolioCSS.png"
 		  ]	
 		},
 		{
 		  "title" : "Interactive Resume",
 		  "dates" : "March 10th 2015, March 19th 2015",
-		  "description" : "Learning even more HTML, as well as some Javascript",
+		  "description" : "Learning Javascript, as well as some JQuery",
 		  "projUrl" : "https://github.com/Kleinbottled/frontend-nanodegree-resume",
 		  "images" :  [
-		  "http://www.placesheen.com/190/290",
-		  "http://www.placekitten.com/205/241",
-		  "http://www.placesheen.com/245/252"
+		  "images/ResumeScreen.png",
+		  "images/ResumeJS.png",
+		  "images/ResumeHTML.png"
 		  ]	
 		}
 	]	
